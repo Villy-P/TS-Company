@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+} 
+
+.navbar {
+    /* display: block; */
+    min-height: 45px;
+    width: 100%;
+    border: 2px solid;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(1,1,1,1) 100%, rgba(20,18,61,1) 100%, rgba(0,212,255,1) 100%, rgba(28,28,57,1) 100%, rgba(9,9,121,1) 100%);
+    position: relative;
+    margin: 0;
+}
+
+.user-icon {
+    background-color: royalblue;
+    border: 2px solid royalblue;
+    color: white;
+}
+
+.user-icon {
+    background: #42abed;
+    background-image: -webkit-linear-gradient(top, #42abed, #009dff);
+    background-image: -moz-linear-gradient(top, #42abed, #009dff);
+    background-image: -ms-linear-gradient(top, #42abed, #009dff);
+    background-image: -o-linear-gradient(top, #42abed, #009dff);
+    background-image: linear-gradient(to bottom, #42abed, #009dff);
+    -webkit-border-radius: 36;
+    -moz-border-radius: 36;
+    border-radius: 36px;
+    text-shadow: 1px 1px 30px #666666;
+    -webkit-box-shadow: 1px 1px 10px #666666;
+    -moz-box-shadow: 1px 1px 10px #666666;
+    box-shadow: 1px 1px 10px #666666;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 3px 10px 3px 10px;
+    text-decoration: none;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    transition: background-image 0.5s ease;
+}
+  
+.user-icon:hover {
+    background: #009dff;
+    background-image: -webkit-linear-gradient(top, #009dff, #42abed);
+    background-image: -moz-linear-gradient(top, #009dff, #42abed);
+    background-image: -ms-linear-gradient(top, #009dff, #42abed);
+    background-image: -o-linear-gradient(top, #009dff, #42abed);
+    background-image: linear-gradient(to bottom, #009dff, #42abed);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* body {
+    background: rgb(30,30,57);
+    background: linear-gradient(90deg, rgba(30,30,57,1) 0%, rgba(1,1,1,1) 100%, rgba(213,212,238,1) 100%, rgba(0,212,255,1) 100%, rgba(28,28,57,1) 100%, rgba(9,9,121,1) 100%);
+} */
