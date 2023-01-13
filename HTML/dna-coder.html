@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DNA Coder</title>
+
+        <link rel="stylesheet" href="../CSS/main-navbar.css">
+        <link rel="stylesheet" href="../CSS/dna-coder.css">
+        <link rel="stylesheet" href="../CSS/style.css   ">
+
+        <script src="https://kit.fontawesome.com/3c60254cfe.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="user-icon"><i class="fa-solid fa-user"></i></div>
+        </div>
+
+        <br>
+        
+        <div class="dna-coder-title">DNA Coder</div>
+
+        <br><br>
+
+        <div class="center">
+            <button class="activateChart" onclick="clickDisplayTranslationChart()">Show Translation Chart</button>
+
+            <div class="container" style="display: none;">
+                <div class="First-mRNA-Base">First mRNA Base</div>
+                <div class="A">A</div>
+                <div class="G">G</div>
+                <div class="Third-mRNA-Base">Third mRNA Base</div>
+                <div class="U">U</div>
+                <div class="C">C</div>
+                <div class="Phenylalanine-(Phe)">Phenylalanine (Phe)</div>
+                <div class="Serine-(Ser)">Serine (Ser)</div>
+                <div class="Tyrosine-(Tyr)">Tyrosine (Tyr)</div>
+                <div class="Cysteine-(Cys)">Cysteine (Cys)</div>
+                <div class="Stop">Stop</div>
+                <div class="-U-">U</div>
+                <div class="-C-">C</div>
+                <div class="-A-">A</div>
+                <div class="-G-">G</div>
+                <div class="-Stop-">Stop</div>
+                <div class="--U--">U</div>
+                <div class="--C--">C</div>
+                <div class="--A--">A</div>
+                <div class="--G--">G</div>
+                <div class="Tryptophan-(Trp)">Tryptophan (Trp)</div>
+                <div class="Leucine-(Leu)">Leucine (Leu)</div>
+                <div class="Proline-(Pro)">Proline (Pro)</div>
+                <div class="Histidine-(His)">Histidine (His)</div>
+                <div class="Glutamine-(Gln)">Glutamine (Gln)</div>
+                <div class="Arginine-(Arg)">Arginine (Arg)</div>
+                <div class="---U---">U</div>
+                <div class="---C---">C</div>
+                <div class="---A---">A</div>
+                <div class="---G---">G</div>
+                <div class="Isoleucine-(Ile)">Isoleucine (Ile)</div>
+                <div class="Methionine-(Met)">Methionine (Met)</div>
+                <div class="Threonine-(Thr)">Threonine (Thr)</div>
+                <div class="Asparagine-(Asn)">Asparagine (Asn)</div>
+                <div class="Lysine-(Lys)">Lysine (Lys)</div>
+                <div class="-Serine-(Ser)-">Serine (Ser)</div>
+                <div class="-Arginine-(Arg)-">Arginine (Arg)</div>
+                <div class="----U----">U</div>
+                <div class="----C----">C</div>
+                <div class="----A----">A</div>
+                <div class="----G----">G</div>
+                <div class="Valine-(Val)">Valine (Val)</div>
+                <div class="Alanine-(Ala)">Alanine (Ala)</div>
+                <div class="Aspartic-Acid-(Asp)">Aspartic Acid (Asp)</div>
+                <div class="Glutamic-Acid-(Glu)">Glutamic Acid (Glu)</div>
+                <div class="Glycine-(Gly)">Glycine (Gly)</div>
+                <div class="-----U-----">U</div>
+                <div class="-----C-----">C</div>
+                <div class="-----A-----">A</div>
+                <div class="-----G-----">G</div>
+            </div>
+
+            <br><br>
+
+            <label for="activities"></label>
+            <select name="activities" class="activities">
+                <option value="match-dna">Match DNA</option>
+                <option value="dna-to-rna">DNA to RNA</option>
+                <option value="rna-to-amino-acid">RNA to Amino Acid</option>
+            </select>
+
+            <label for="settings"></label>
+            <select name="settings" class="settings">
+                <option value="1-value">1 Value</option>
+                <option value="3-value">3 Values</option>
+                <option value="3-value">5 Values</option>
+                <option value="3-value">10 Values</option>
+                <option value="random">Random</option>
+            </select>
+
+            <br><br>
+
+            <a class="activateHint" href="#popup1" onclick="clickDisplayHint()">Show Hint</a>
+
+            <div id="popup1" class="overlay">
+                <div class="popup">
+                    <h2>Hint</h2>
+                    <a class="close" href="#">&times;</a>
+                    <div class="content"></div>
+                </div>
+            </div>
+
+            <br><br><br>
+
+            <div class="problem"></div>
+
+            <br>
+
+            <p class="allGood" style="display: none;">All good!</p>
+
+            <br>
+
+            <button class="newProblem" onclick="generateProblem()">Generate New Problem</button>
+
+            <br><br>
+
+            <button class="submit" onclick="solveButtonClicked()">Submit</button><br><br>
+        </div>
+        
+        <script src="../src/JS/dna-coder.js"></script>
+    </body>
+</html>

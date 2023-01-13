@@ -58,7 +58,6 @@
     cursor: pointer;
 }
 
-/* body {
-    background: rgb(30,30,57);
-    background: linear-gradient(90deg, rgba(30,30,57,1) 0%, rgba(1,1,1,1) 100%, rgba(213,212,238,1) 100%, rgba(0,212,255,1) 100%, rgba(28,28,57,1) 100%, rgba(9,9,121,1) 100%);
-} */
+body {
+    background-color: #111112;
+}
