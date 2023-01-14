@@ -30,7 +30,7 @@ function getHint() {
         case "dna-to-rna":
             return "<pre>A turns to U\nT turns to A\nG turns to C\nC turns to G\n</pre>";
         case "rna-to-amino-acid":
-            return "<pre>Use the translation chart.\nEither use the name or the shortened version of the name.\n</pre>";
+            return "<pre>Use the translation chart.\nEither use the name or the\nshortened version of the name.\n</pre>";
         default:
             throw new Error("ID not found for: " + activitiesDropdown.value);
     }
@@ -215,7 +215,12 @@ function solveAminoAcid() {
         child.classList.remove("wrong");
         const name = getName(currentProblem[i - valueSetting].toUpperCase());
         const splitName = name.split(" ");
-        splitName.pop() == child.value.toLowerCase() || splitName.join(" ") == child.value[i].toLowerCase() ? child.classList.add("correct") : child.classList.add("wrong");
+        if (child.value == "")
+            child.classList.add("wrong");
+        else
+            splitName.pop() == child.value.toLowerCase() || splitName.join(" ") == child.value[i].toLowerCase() ?
+                child.classList.add("correct") :
+                child.classList.add("wrong");
         if (child.classList.contains("wrong"))
             hadWrong = true;
     }

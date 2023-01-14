@@ -71,6 +71,10 @@
     font-size: 30px;
 }
 
+.problem > input {
+    text-align: center;
+}
+
 .correct {
     background-color: green;
 }
