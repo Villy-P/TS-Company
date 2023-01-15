@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Experiment with Genotypes and Phenotypes by creating random people and viewing what potential babies could look like.">
+        <title>Baby Maker</title>
+
+        <link rel="stylesheet" href="../CSS/main-navbar.css">
+        <link rel="stylesheet" href="../CSS/baby-maker.css">
+        <link rel="stylesheet" href="../CSS/style.css">
+
+        <script src="https://kit.fontawesome.com/3c60254cfe.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <ul class="navbar">
+            <li class="nav-item-left nav-title"><a href="">Interactive Bio</a></li>
+            <li class="nav-item-left nav-text"><a href="activities.html">Activities</a></li>
+            <li class="nav-item-right nav-text"><a href="">About</a></li>
+        </ul><br>
+        
+        <div class="baby-maker-title">Baby Maker</div><br>
+
+        <div class="center">
+            <button class="randomPerson" onclick="pressCreateRandomPerson()">Create a New Random Person</button>
+            <button class="seePossibleBaby" onclick="pressSeeBaby()">See What a Baby Would Look Like</button><br>
+            
+            <p class="no-people">Make Sure You Have One Male And One Female</p><br>
+
+            <input type="text" name="firstName" class="name-input" placeholder="First Name">
+            <input type="text" name="lastName" class="name-input" placeholder="Last Name"><br>
+            
+            <p class="invalid-args">Enter Values Into Input Boxes</p><br><br>
+
+            <button class="finalizeCreate" onclick="pressFinalizeCreate()">Create</button>
+            <button class="neverMind" onclick="pressNeverMind()">Never Mind</button><br><br>
+
+            <div class="person-container"></div><br><br>
+        </div>
+
+        <script src="../src/JS/baby-maker-person.js"></script>
+        <script src="../src/JS/baby-maker.js"></script> 
+    </body>
+</html>

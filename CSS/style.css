@@ -1,5 +1,6 @@
 .center {
     text-align: center;
+    overflow-x: visible;
 }
 
 html, body {

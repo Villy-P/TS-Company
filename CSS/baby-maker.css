@@ -1,0 +1,177 @@
+.baby-maker-title {
+    color: white;
+    font-size: xx-large;
+    text-align: center;
+}
+
+.randomPerson, .seePossibleBaby {
+    appearance: none;
+    background: #0099ff;
+    background-image: -webkit-linear-gradient(top, #0099ff, #006fb0);
+    background-image: -moz-linear-gradient(top, #0099ff, #006fb0);
+    background-image: -ms-linear-gradient(top, #0099ff, #006fb0);
+    background-image: -o-linear-gradient(top, #0099ff, #006fb0);
+    background-image: linear-gradient(to bottom, #0099ff, #006fb0);
+    border: 3px solid black;
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 6px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+    transition: box-shadow .15s, transform .15s;
+}
+
+.randomPerson:hover, .seePossibleBaby:hover {
+    background: #006fb0;
+    background-image: -webkit-linear-gradient(top, #006fb0, #0099ff);
+    background-image: -moz-linear-gradient(top, #006fb0, #0099ff);
+    background-image: -ms-linear-gradient(top, #006fb0, #0099ff);
+    background-image: -o-linear-gradient(top, #006fb0, #0099ff);
+    background-image: linear-gradient(to bottom, #006fb0, #0099ff);
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+
+.randomPerson:active, .seePossibleBaby:active {
+    transform: translateY(5px);
+}
+
+.name-input {
+    padding: 5px;
+    font-size: 16px;
+    border-width: 3px;
+    border-color: #000000;
+    background-color: #666666;
+    color: #ffffff;
+    border-style: solid;
+    border-radius: 15px;
+    box-shadow: 2px 0px 30px rgba(255,255,255,.100);
+    text-shadow: 3px 0px 6px rgba(0,0,0,.88);
+    text-align: center;
+    display: none;
+    margin: 0;
+}
+
+.finalizeCreate, .neverMind {
+    appearance: none;
+    background: #0099ff;
+    background-image: -webkit-linear-gradient(top, #0099ff, #006fb0);
+    background-image: -moz-linear-gradient(top, #0099ff, #006fb0);
+    background-image: -ms-linear-gradient(top, #0099ff, #006fb0);
+    background-image: -o-linear-gradient(top, #0099ff, #006fb0);
+    background-image: linear-gradient(to bottom, #0099ff, #006fb0);
+    border: 3px solid black;
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 2px 8px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+    transition: box-shadow .15s, transform .15s;
+    display: none;
+}
+
+.finalizeCreate:hover, .neverMind:hover {
+    background: #006fb0;
+    background-image: -webkit-linear-gradient(top, #006fb0, #0099ff);
+    background-image: -moz-linear-gradient(top, #006fb0, #0099ff);
+    background-image: -ms-linear-gradient(top, #006fb0, #0099ff);
+    background-image: -o-linear-gradient(top, #006fb0, #0099ff);
+    background-image: linear-gradient(to bottom, #006fb0, #0099ff);
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+
+.finalizeCreate:active, .neverMind:active {
+    transform: translateY(5px);
+}
+
+.invalid-args {
+    color: red;
+    display: none;
+}
+
+.no-people {
+    color: red;
+    display: none;
+}
+
+.person-container {
+    text-align: center;
+    margin: auto;
+}
+
+.person-btn {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 80%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    margin: auto;
+}
+
+.person-btn-active, .person-btn:hover {
+    background-color: #0b0b0b;
+}
+
+.person-btn-content {
+    max-height: 0px;
+    width: 80%;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #020202;
+    margin: auto;
+    color: white;
+    text-align: left;
+}
+
+.person-btn:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.person-btn-active:after {
+    content: "\2212";
+}
+
+.female {
+    color: palevioletred;
+}
+
+.male {
+    color: blue;
+}

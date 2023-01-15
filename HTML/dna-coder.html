@@ -4,6 +4,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Choose between three options to match DNA/RNA/Amino Acid. 
+        Match DNA, match DNA and RNA, and use the translation chart to match up RNA with it's corresponding Amino Acid.">
         <title>DNA Coder</title>
 
         <link rel="stylesheet" href="../CSS/main-navbar.css">
@@ -17,14 +19,8 @@
             <li class="nav-item-left nav-title"><a href="">Interactive Bio</a></li>
             <li class="nav-item-left nav-text"><a href="activities.html">Activities</a></li>
             <li class="nav-item-right nav-text"><a href="">About</a></li>
-        </ul>
-
-        <br>
-        
-        <div class="dna-coder-title">DNA Coder</div>
-
-        <br><br>
-
+        </ul><br>
+        <div class="dna-coder-title">DNA Coder</div><br><br>
         <div class="center">
             <button class="activateChart" onclick="clickDisplayTranslationChart()">Show Translation Chart</button>
 
@@ -79,17 +75,13 @@
                 <div class="-----C-----">C</div>
                 <div class="-----A-----">A</div>
                 <div class="-----G-----">G</div>
-            </div>
-
-            <br><br>
-
+            </div><br><br>
             <label for="activities"></label>
             <select name="activities" class="activities">
                 <option value="match-dna">Match DNA</option>
                 <option value="dna-to-rna">DNA to RNA</option>
                 <option value="rna-to-amino-acid">RNA to Amino Acid</option>
             </select>
-
             <label for="settings"></label>
             <select name="settings" class="settings">
                 <option value="1-value">1 Value</option>
@@ -97,34 +89,18 @@
                 <option value="3-value">5 Values</option>
                 <option value="3-value">10 Values</option>
                 <option value="random">Random</option>
-            </select>
-
-            <br><br>
-
+            </select><br><br>
             <a class="activateHint" href="#popup1" onclick="clickDisplayHint()">Show Hint</a>
-
             <div id="popup1" class="overlay">
                 <div class="popup">
                     <h2>Hint</h2>
                     <a class="close" href="#">&times;</a>
                     <div class="content"></div>
                 </div>
-            </div>
-
-            <br><br><br>
-
-            <div class="problem"></div>
-
-            <br>
-
-            <p class="allGood" style="display: none;">All good!</p>
-
-            <br>
-
-            <button class="newProblem" onclick="generateProblem()">Generate New Problem</button>
-
-            <br><br>
-
+            </div><br><br><br>
+            <div class="problem"></div><br>
+            <p class="allGood" style="display: none;">All good!</p><br>
+            <button class="newProblem" onclick="generateProblem()">Generate New Problem</button><br><br>
             <button class="submit" onclick="solveButtonClicked()">Submit</button><br><br>
         </div>
         
