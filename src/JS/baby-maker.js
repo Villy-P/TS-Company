@@ -5,6 +5,10 @@ const neverMind = document.querySelector(".neverMind");
 const invalidArgs = document.querySelector(".invalid-args");
 const personContainer = document.querySelector(".person-container");
 const noPeople = document.querySelector(".no-people");
+const selecterText = document.querySelector(".selecter-text");
+let selecter = "none";
+let male;
+let female;
 function pressCreateRandomPerson() {
     nameInputs.forEach((e) => {
         e.setAttribute("style", "display: inline;");
@@ -57,10 +61,23 @@ function pressFinalizeCreate() {
     personDiv.addEventListener("click", function () {
         personDiv.classList.toggle("person-btn-active");
         const content = personDiv.nextElementSibling;
-        if (content.style.maxHeight === "0px")
-            content.style.maxHeight = content.scrollHeight + "px";
-        else
-            content.style.maxHeight = "0px";
+        if (selecter == "none") {
+            if (content.style.maxHeight === "0px")
+                content.style.maxHeight = content.scrollHeight + "px";
+            else
+                content.style.maxHeight = "0px";
+        }
+        if (selecter == "m" && newPerson.isMale) {
+            male = newPerson;
+            selecter = "f";
+            selecterText.innerHTML = "Select the Female";
+        }
+        else if (selecter == "f" && !newPerson.isMale) {
+            female = newPerson;
+            selecter = "none";
+            selecterText.setAttribute("style", "display: none");
+            selecterText.innerHTML = "Select the Male";
+        }
     });
 }
 function hasMale() {
@@ -81,4 +98,6 @@ function pressSeeBaby() {
         noPeople.setAttribute("style", "display: inline");
         return;
     }
+    selecterText.setAttribute("style", "display: inline");
+    selecter = "m";
 }

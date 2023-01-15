@@ -181,15 +181,18 @@ function generateProblem() {
     resetGrid();
     for (let i = 0; i < valueSetting; i++) {
         const cell = document.createElement("div");
+        const input = document.createElement("div");
+        const wrapperDiv = document.createElement("div");
+        input.contentEditable = "true";
+        input.className = "problem-input";
+        cell.className = "problem-cell";
         cell.innerHTML = generateRandomSequence();
         currentProblem.push(cell.innerHTML);
-        problem.appendChild(cell);
+        wrapperDiv.appendChild(cell);
+        wrapperDiv.appendChild(input);
+        problem.appendChild(wrapperDiv);
     }
-    for (let i = 0; i < valueSetting; i++) {
-        const input = document.createElement("input");
-        input.type = "text";
-        problem.appendChild(input);
-    }
+ 
 }
 
 function getRandomValueFromArray(array: string[]): string {

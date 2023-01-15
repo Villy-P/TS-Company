@@ -175,3 +175,9 @@
 .male {
     color: blue;
 }
+
+.selecter-text {
+    color: white;
+    display: none;
+    font-size: larger;
+}
