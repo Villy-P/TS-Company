@@ -102,6 +102,7 @@ function makePersonContainer(container: HTMLDivElement, personDiv: HTMLButtonEle
     const personContentDiv: HTMLDivElement = document.createElement("div");
     personContentDiv.className = "person-btn-content";
     personContent.innerHTML = person.getData();
+    personContentDiv.style.textAlign = "left";
     personDiv.classList.add(person.isMale ? "male" : "female");
     personDiv.classList.add("person-btn");
     personDiv.innerHTML = person.firstName + " " + person.lastName;

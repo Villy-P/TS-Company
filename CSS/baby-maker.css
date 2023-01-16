@@ -181,3 +181,8 @@
     display: none;
     font-size: larger;
 }
+
+.person-btn-content > p > pre > p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

@@ -212,25 +212,26 @@ class Person {
         return "Present";
     }
     getData() {
-        return `<pre>
-        \n  Hair Color:            ${this.getHairColor()} (${this.hairColorGenotype1 + this.hairColorGenotype2})
-  Hair Body:             ${this.getHairBody()} (${this.hairBodyGenotype})
-  Hair Length:           ${this.getHairLength()} (${this.hairLengthGenotype})
-  Widow's Peak:          ${this.getWidowsPeak()} (${this.widowsPeakGenotype})
-  Eyebrow Size:          ${this.getEyebrowSize()} (${this.eyebrowSizeGenotype})
-  Eyebrow Placement:     ${this.getEyebrowPlacement()} (${this.eyebrowPlacementGenotype})\n
-  Eye Color:             ${this.getEyeColor()} (${this.eyeColorGenotype1 + this.eyeColorGenotype2})
-  Eye Size:              ${this.getEyeSize()} (${this.eyeSizeGenotype})
-  Eye Shape:             ${this.getEyeShape()} (${this.eyeShapeGenotype})
-  Eye Slant:             ${this.getEyeSlant()} (${this.eyeSlantGenotype})
-  Eyelash:               ${this.getEyelash()} (${this.eyelashGenotype})\n
-  Skin Color:            ${this.getSkinColor()} (${this.skinColorGenotype1 + this.skinColorGenotype2})
-  Face Shape:            ${this.getFaceShape()} (${this.faceShapeGenotype})
-  Nose Size:             ${this.getNoseSize()} (${this.noseSizeGenotype})
-  Ear Type:              ${this.getEarType()} (${this.earTypeGenotype})
-  Lip Type:              ${this.getLipType()} (${this.lipTypeGenotype})
-  Freckles:              ${this.getFreckle()} (${this.freckleGenotype})
-  Dimples:               ${this.getDimple()} (${this.dimpleGenotype})
-  </pre>`;
+        let data = "<pre>";
+        data += `<p>` + `Phenotype`.padStart(41, " ") + "Genotype".padStart(25, " ") + "</p>";
+        data += `<p>    Hair Color:`.padEnd(35, " ") + `${this.getHairColor().padEnd(25, " ")} (${this.hairColorGenotype1 + this.hairColorGenotype2})</p>`;
+        data += `<p>    Hair Body:`.padEnd(35, " ") + `${this.getHairBody().padEnd(25, " ")} (${this.hairBodyGenotype})</p>`;
+        data += `<p>    Hair Length:`.padEnd(35, " ") + `${this.getHairLength().padEnd(25, " ")} (${this.hairLengthGenotype})</p>`;
+        data += `<p>    Widow's Peak:`.padEnd(35, " ") + `${this.getWidowsPeak().padEnd(25, " ")} (${this.widowsPeakGenotype})</p>`;
+        data += `<p>    Eyebrow Size:`.padEnd(35, " ") + `${this.getEyebrowSize().padEnd(25, " ")} (${this.eyebrowSizeGenotype})</p>`;
+        data += `<p>    Eyebrow Placement:`.padEnd(35, " ") + `${this.getEyebrowPlacement().padEnd(25, " ")} (${this.eyebrowPlacementGenotype})</p>`;
+        data += `<p>    Eye Color:`.padEnd(35, " ") + `${this.getEyeColor().padEnd(25, " ")} (${this.eyeColorGenotype1 + this.eyeColorGenotype2})</p>`;
+        data += `<p>    Eye Size:`.padEnd(35, " ") + `${this.getEyeSize().padEnd(25, " ")} (${this.eyeSizeGenotype})</p>`;
+        data += `<p>    Eye Shape:`.padEnd(35, " ") + `${this.getEyeShape().padEnd(25, " ")} (${this.eyeShapeGenotype})</p>`;
+        data += `<p>    Eye Slant:`.padEnd(35, " ") + `${this.getEyeSlant().padEnd(25, " ")} (${this.eyeSlantGenotype})</p>`;
+        data += `<p>    Eyelash:`.padEnd(35, " ") + `${this.getEyelash().padEnd(25, " ")} (${this.eyelashGenotype})</p>`;
+        data += `<p>    Skin Color:`.padEnd(35, " ") + `${this.getSkinColor().padEnd(25, " ")} (${this.skinColorGenotype1 + this.skinColorGenotype2})</p>`;
+        data += `<p>    Face Shape:`.padEnd(35, " ") + `${this.getFaceShape().padEnd(25, " ")} (${this.faceShapeGenotype})</p>`;
+        data += `<p>    Nose Size:`.padEnd(35, " ") + `${this.getNoseSize().padEnd(25, " ")} (${this.noseSizeGenotype})</p>`;
+        data += `<p>    Ear Type:`.padEnd(35, " ") + `${this.getEarType().padEnd(25, " ")} (${this.earTypeGenotype})</p>`;
+        data += `<p>    Lip Type:`.padEnd(35, " ") + `${this.getLipType().padEnd(25, " ")} (${this.lipTypeGenotype})</p>`;
+        data += `<p>    Freckles:`.padEnd(35, " ") + `${this.getFreckle().padEnd(25, " ")} (${this.freckleGenotype})</p>`;
+        data += `<p>    Dimples:`.padEnd(35, " ") + `${this.getDimple().padEnd(25, " ")} (${this.dimpleGenotype})</p>`;
+        return data + "</pre>";
     }
 }
