@@ -13,7 +13,8 @@ let male;
 let female;
 function okBaby() {
     okBabyText.style.display = "none";
-    babyContainer.children[0].remove();
+    for (const child of babyContainer.children)
+        child.remove();
 }
 function pressCreateRandomPerson() {
     nameInputs.forEach((e) => {
