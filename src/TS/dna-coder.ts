@@ -212,11 +212,14 @@ function generateRandomSequence() {
 function solve() {
     const children = problem.children;
     let hadWrong = false;
-    for (let i = valueSetting; i < children.length; i++) {
-        const child = children[i] as HTMLInputElement;
+    for (let i = 0; i < children.length; i++) {
+        const child: HTMLDivElement = children[i].children[1] as HTMLDivElement;
         child.classList.remove("correct");
         child.classList.remove("wrong");
-        swap(child.value.toUpperCase()) == currentProblem[i - valueSetting] ? child.classList.add("correct") : child.classList.add("wrong");
+        if (child.textContent === null)
+            child.classList.add("wrong");
+        else
+            swap(child.textContent.toUpperCase()) == currentProblem[i] ? child.classList.add("correct") : child.classList.add("wrong");
         if (child.classList.contains("wrong"))
             hadWrong = true;
     }
@@ -230,16 +233,17 @@ function solve() {
 function solveAminoAcid() {
     const children = problem.children;
     let hadWrong = false;
-    for (let i = valueSetting; i < children.length; i++) {
-        const child: HTMLInputElement = children[i] as HTMLInputElement;
+    for (let i = 0; i < children.length; i++) {
+        const child: HTMLDivElement = children[i].children[1] as HTMLDivElement;
         child.classList.remove("correct");
         child.classList.remove("wrong");
-        const name: string = getName(currentProblem[i - valueSetting].toUpperCase());
+        const name: string = getName(currentProblem[i].toUpperCase());
         const splitName: string[] = name.split(" ");
-        if (child.value == "")
+        console.log(child.textContent)
+        if (child.textContent === null || child.textContent === "")
             child.classList.add("wrong")
         else
-            splitName.pop() == child.value.toLowerCase() || splitName.join(" ") == child.value[i].toLowerCase() ? 
+            splitName.pop() == child.textContent.toLowerCase() || splitName.join(" ") == child.textContent[0].toLowerCase() ? 
                 child.classList.add("correct") : 
                 child.classList.add("wrong");
         if (child.classList.contains("wrong"))

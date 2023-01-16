@@ -1,10 +1,45 @@
 .main-title {
-    font-family: Georgia, serif;
-    font-size: 32px;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 50px;
     letter-spacing: -2px;
-    color: white;
+    color: #FFFFFF;
     font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
     font-variant: small-caps;
+    left: 15%;
+    position: relative;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+    width: fit-content;
+    margin: 0;
+}
+
+.fun-and-free {
+    display: inline-block;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 40px;
+    color: white;
+    font-weight: 400;
+    text-decoration: none solid rgb(68, 68, 68);
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    left: 15%;
+    position: relative;
+    max-width: 600px;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+.fun-and-free-bold {
+    font-weight: bolder;
+    background: #CF0202;
+    background: linear-gradient(to right, #CF0202 20%, #CF8D42 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .box {
@@ -34,6 +69,7 @@
     font-weight: 400;
     padding: 3px;
 }
+
 .activity-btn {
     background: #00a6ff;
     background-image: -webkit-linear-gradient(top, #00a6ff, #0068a8);
@@ -74,4 +110,59 @@
 
 .activity-btn:active {
     transform: translateY(5px);
+}
+
+.activities-about-selector {
+    display: flex;
+    max-width: 600px;
+    height: 100px;
+    background-color: rgb(28, 26, 26);
+    position: relative;
+    left: 15%;
+    border: 5px solid black;
+    color: white;
+}
+
+.activities-about-text {
+    text-align: center;
+    position: relative;
+    flex-grow: 50;
+    margin: auto;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 30px;
+    color: #FFFFFF;
+    font-weight: 700;
+    text-decoration: none solid rgb(68, 68, 68);
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    transition: opacity .5s ease-in-out;
+}
+
+.activities-btn-left {
+    position: relative;
+    height: 100px;
+    background-color: rgb(28, 26, 26);
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: x-large;
+    flex-grow: 1;
+}
+
+.activities-btn-right {
+    position: relative;
+    height: 100px;
+    background-color: rgb(28, 26, 26);
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: x-large;
+    flex-grow: 1;
+}
+
+.main-img {
+    position: relative;
+    left: 60%;
+    top: 50%;
 }
