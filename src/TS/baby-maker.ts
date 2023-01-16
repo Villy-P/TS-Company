@@ -14,8 +14,8 @@ let female: Person;
 
 function okBaby(): void {
     okBabyText.style.display = "none";
-    for (const child of babyContainer.children)
-        child.remove();
+    babyContainer.children[0].remove();
+    babyContainer.children[0].remove();
 }
 
 function pressCreateRandomPerson(): void {
