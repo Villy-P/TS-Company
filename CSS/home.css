@@ -1,0 +1,77 @@
+.main-title {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    letter-spacing: -2px;
+    color: white;
+    font-weight: 700;
+    font-variant: small-caps;
+}
+
+.box {
+    background-color: rgb(28, 26, 26);
+    width: 100%;
+    height: fit-content;
+    float: left;
+    margin: auto;
+    border: 5px solid black;
+    text-align: center;
+}
+
+.activities-about {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    letter-spacing: -2px;
+    color: white;
+    font-weight: 700;
+    font-variant: small-caps;
+}
+
+.activities-to-do > p {
+    color: white;
+    font-family: Georgia, serif;
+    font-size: 15px;
+    letter-spacing: -1px;
+    font-weight: 400;
+    padding: 3px;
+}
+.activity-btn {
+    background: #00a6ff;
+    background-image: -webkit-linear-gradient(top, #00a6ff, #0068a8);
+    background-image: -moz-linear-gradient(top, #00a6ff, #0068a8);
+    background-image: -ms-linear-gradient(top, #00a6ff, #0068a8);
+    background-image: -o-linear-gradient(top, #00a6ff, #0068a8);
+    background-image: linear-gradient(to bottom, #00a6ff, #0068a8);
+    -webkit-border-radius: 11;
+    -moz-border-radius: 11;
+    border-radius: 11px;
+    text-shadow: 2px 2px 9px #000000;
+    -webkit-box-shadow: 1px 1px 10px #000000;
+    -moz-box-shadow: 1px 1px 10px #000000;
+    box-shadow: 1px 1px 10px #000000;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 15px;
+    padding: 10px 20px 10px 20px;
+    border: solid #000000 3px;
+    text-decoration: none;
+    width: 125px;
+    height: 20px;
+    margin: auto;
+    transition: box-shadow .15s, transform .15s;
+}
+  
+.activity-btn:hover {
+    background: #0068a8;
+    background-image: -webkit-linear-gradient(top, #0068a8, #00a6ff);
+    background-image: -moz-linear-gradient(top, #0068a8, #00a6ff);
+    background-image: -ms-linear-gradient(top, #0068a8, #00a6ff);
+    background-image: -o-linear-gradient(top, #0068a8, #00a6ff);
+    background-image: linear-gradient(to bottom, #0068a8, #00a6ff);
+    transform: translateY(-5px);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.activity-btn:active {
+    transform: translateY(5px);
+}

@@ -1,3 +1,37 @@
+function getGenotype(genotype: string): string {
+    const capitalGenotype: string = genotype[0].toUpperCase();
+    const lowerGenotype: string = genotype[0].toLowerCase();
+    if (genotype == capitalGenotype + capitalGenotype)
+        return "homo-dominant";
+    if (genotype == lowerGenotype + lowerGenotype)
+        return "homo-reccessive";
+    return "hetero";
+}
+
+function makeGenotypeFrom(fatherGenotype: string, motherGenotype: string): string {
+    const capitalGenotype: string = fatherGenotype[0].toUpperCase();
+    const lowerGenotype: string = fatherGenotype[0].toLowerCase();
+    const fatherGene = getGenotype(fatherGenotype);
+    const motherGene = getGenotype(motherGenotype);
+    if (fatherGene == "homo-dominant" && motherGene == "homo-dominant")
+        return capitalGenotype + capitalGenotype;
+    if (fatherGene == "homo-reccessive" && motherGene == "homo-reccessive")
+        return lowerGenotype + lowerGenotype;
+    if (fatherGene == "homo-reccessive" && motherGene == "homo-dominant" || fatherGene == "homo-dominant" && motherGene == "homo-reccessive")
+        return capitalGenotype + lowerGenotype;
+    if (fatherGene == "hetero" && motherGene == "hetero") {
+        const randomNum: number = randomInRange(1, 4);
+        if (randomNum == 1)
+            return capitalGenotype + capitalGenotype;
+        if (randomNum == 2)
+            return lowerGenotype + lowerGenotype;
+        return capitalGenotype + lowerGenotype;
+    }
+    if (fatherGene == "hetero" && motherGene == "homo-dominant" || fatherGene == "homo-dominant" && motherGene == "hetero")
+        return randomInRange(0, 1) == 0 ? capitalGenotype + capitalGenotype : capitalGenotype + lowerGenotype;
+    return randomInRange(0, 1) == 0 ? capitalGenotype + lowerGenotype : lowerGenotype + lowerGenotype;
+}
+
 class Person {
     public isMale: boolean;
     public firstName: string;
@@ -54,6 +88,35 @@ class Person {
         this.lipTypeGenotype = makeGenotype("L", "l");
         this.freckleGenotype = makeGenotype("F", "f");
         this.dimpleGenotype = makeGenotype("D", "d");
+    }
+
+    public haveBabyWith(other: Person): Person {
+        const baby: Person = new Person("New", "Baby");
+        baby.isMale = randomInRange(0, 1) == 0;
+        baby.hairColorGenotype1 = makeGenotypeFrom(this.hairColorGenotype1 , other.hairColorGenotype1);
+        baby.hairColorGenotype2 = makeGenotypeFrom(this.hairColorGenotype2 , other.hairColorGenotype2);
+        baby.hairBodyGenotype = makeGenotypeFrom(this.hairBodyGenotype , other.hairBodyGenotype);
+        baby.hairLengthGenotype = makeGenotypeFrom(this.hairLengthGenotype , other.hairLengthGenotype);
+        baby.widowsPeakGenotype = makeGenotypeFrom(this.widowsPeakGenotype , other.widowsPeakGenotype);
+        baby.eyebrowSizeGenotype = makeGenotypeFrom(this.eyebrowSizeGenotype , other.eyebrowSizeGenotype);
+        baby.eyebrowPlacementGenotype = makeGenotypeFrom(this.eyebrowPlacementGenotype , other.eyebrowPlacementGenotype);
+
+        baby.eyeColorGenotype1 = makeGenotypeFrom(this.eyeColorGenotype1 , other.eyeColorGenotype1);
+        baby.eyeColorGenotype2 = makeGenotypeFrom(this.eyeColorGenotype2 , other.eyeColorGenotype2);
+        baby.eyeSizeGenotype = makeGenotypeFrom(this.eyeSizeGenotype , other.eyeSizeGenotype);
+        baby.eyeShapeGenotype = makeGenotypeFrom(this.eyeShapeGenotype , other.eyeShapeGenotype);
+        baby.eyeSlantGenotype = makeGenotypeFrom(this.eyeSlantGenotype , other.eyeSlantGenotype);
+        baby.eyelashGenotype = makeGenotypeFrom(this.eyelashGenotype , other.eyelashGenotype);
+
+        baby.skinColorGenotype1 = makeGenotypeFrom(this.skinColorGenotype1 , other.skinColorGenotype1);
+        baby.skinColorGenotype2 = makeGenotypeFrom(this.skinColorGenotype2 , other.skinColorGenotype2);
+        baby.faceShapeGenotype = makeGenotypeFrom(this.faceShapeGenotype , other.faceShapeGenotype);
+        baby.noseSizeGenotype = makeGenotypeFrom(this.noseSizeGenotype , other.noseSizeGenotype);
+        baby.earTypeGenotype = makeGenotypeFrom(this.earTypeGenotype , other.earTypeGenotype);
+        baby.lipTypeGenotype = makeGenotypeFrom(this.lipTypeGenotype , other.lipTypeGenotype);
+        baby.freckleGenotype = makeGenotypeFrom(this.freckleGenotype , other.freckleGenotype);
+        baby.dimpleGenotype = makeGenotypeFrom(this.dimpleGenotype , other.dimpleGenotype);
+        return baby;
     }
 
     public getHairColor(): string {

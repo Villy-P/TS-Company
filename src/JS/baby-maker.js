@@ -6,9 +6,15 @@ const invalidArgs = document.querySelector(".invalid-args");
 const personContainer = document.querySelector(".person-container");
 const noPeople = document.querySelector(".no-people");
 const selecterText = document.querySelector(".selecter-text");
+const babyContainer = document.querySelector(".baby-container");
+const okBabyText = document.querySelector(".ok-baby");
 let selecter = "none";
 let male;
 let female;
+function okBaby() {
+    okBabyText.style.display = "none";
+    babyContainer.children[0].remove();
+}
 function pressCreateRandomPerson() {
     nameInputs.forEach((e) => {
         e.setAttribute("style", "display: inline;");
@@ -16,6 +22,8 @@ function pressCreateRandomPerson() {
     finalizeCreate.setAttribute("style", "display: inline;");
     neverMind.setAttribute("style", "display: inline;");
     noPeople.setAttribute("style", "display: none");
+    selecterText.setAttribute("style", "display: none");
+    selecter = "none";
 }
 function pressNeverMind() {
     nameInputs.forEach((e) => {
@@ -47,21 +55,11 @@ function pressFinalizeCreate() {
     const newPerson = new Person(nameInputs[0].value, nameInputs[1].value);
     people.push(newPerson);
     const personDiv = document.createElement("button");
-    const personContent = document.createElement("p");
-    const personContentDiv = document.createElement("div");
-    personContentDiv.className = "person-btn-content";
-    personContent.innerHTML = newPerson.getData();
-    personDiv.classList.add(newPerson.isMale ? "male" : "female");
-    personDiv.classList.add("person-btn");
-    personDiv.innerHTML = newPerson.firstName + " " + newPerson.lastName;
-    personContentDiv.style.maxHeight = "0px";
-    personContainer.appendChild(personDiv);
-    personContentDiv.appendChild(personContent);
-    personContainer.appendChild(personContentDiv);
+    makePersonContainer(personContainer, personDiv, newPerson);
     personDiv.addEventListener("click", function () {
-        personDiv.classList.toggle("person-btn-active");
         const content = personDiv.nextElementSibling;
         if (selecter == "none") {
+            personDiv.classList.toggle("person-btn-active");
             if (content.style.maxHeight === "0px")
                 content.style.maxHeight = content.scrollHeight + "px";
             else
@@ -77,8 +75,32 @@ function pressFinalizeCreate() {
             selecter = "none";
             selecterText.setAttribute("style", "display: none");
             selecterText.innerHTML = "Select the Male";
+            const babyDiv = document.createElement("button");
+            makePersonContainer(babyContainer, babyDiv, male.haveBabyWith(female));
+            okBabyText.style.display = "inline";
+            babyDiv.addEventListener("click", function () {
+                const content = babyDiv.nextElementSibling;
+                babyDiv.classList.toggle("person-btn-active");
+                if (content.style.maxHeight === "0px")
+                    content.style.maxHeight = content.scrollHeight + "px";
+                else
+                    content.style.maxHeight = "0px";
+            });
         }
     });
+}
+function makePersonContainer(container, personDiv, person) {
+    const personContent = document.createElement("p");
+    const personContentDiv = document.createElement("div");
+    personContentDiv.className = "person-btn-content";
+    personContent.innerHTML = person.getData();
+    personDiv.classList.add(person.isMale ? "male" : "female");
+    personDiv.classList.add("person-btn");
+    personDiv.innerHTML = person.firstName + " " + person.lastName;
+    personContentDiv.style.maxHeight = "0px";
+    container.appendChild(personDiv);
+    personContentDiv.appendChild(personContent);
+    container.appendChild(personContentDiv);
 }
 function hasMale() {
     for (const person of people)
