@@ -90,10 +90,12 @@
     padding: 10px 20px 10px 20px;
     border: solid #000000 3px;
     text-decoration: none;
-    width: 125px;
-    height: 20px;
+    width: fit-content;
+    height: fit-content;
     margin: auto;
     transition: box-shadow .15s, transform .15s;
+    position: relative;
+    left: 17%;
 }
   
 .activity-btn:hover {
@@ -165,4 +167,50 @@
     position: relative;
     left: 60%;
     top: 50%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap');
+
+.learn-more {
+    font-family: Koulen;
+    font-weight: 0;
+    font-size: 15px;
+    color: #fff;
+    background-color: #111112;
+    padding: 10px 30px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border-radius: 1px;
+    transform: translateY(0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    left: 18%;
+    transition: box-shadow .15s, transform .15s;
+}
+
+.learn-more:hover {
+    transform: translateY(-5px);
+}
+
+.learn-more:active {
+    transform: translateY(5px);
+}
+
+.learn-more, .activity-btn {
+    display: inline-block;
+}
+
+@media only screen and (max-width: 800px){
+    .center-if {
+        text-align: center;
+        overflow-x: visible;
+    }
+
+    .center-if > * {
+        left: 0%;
+        margin: auto;
+    }
 }
