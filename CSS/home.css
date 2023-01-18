@@ -151,6 +151,8 @@
     font-size: x-large;
     flex-grow: 1;
     padding: 10px;
+    width: 50px;
+    max-width: 50px;
 }
 
 
@@ -164,6 +166,8 @@
     font-size: x-large;
     flex-grow: 1;
     padding: 10px;
+    width: 50px;
+    max-width: 50px;
 }
 
 

@@ -148,7 +148,8 @@
 .person-btn-content {
     max-height: 0px;
     width: 80%;
-    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: auto;
     transition: max-height 0.2s ease-out;
     background-color: #020202;
     margin: auto;
