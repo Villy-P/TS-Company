@@ -40,7 +40,7 @@
     grid-auto-flow: row;
     gap: 5px;
     background-color: black;
-    padding: 10px;
+    border: 10px solid #010101;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 
@@ -62,7 +62,7 @@
 }
 
 .container > div, .problem-cell {
-    background-color: #202020;
+    background-color: rgb(23, 22, 22);
     padding: 5px 0;
     font-size: 10px;
     align-items: center;

@@ -9,7 +9,8 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: black;
+    background-color: rgb(11, 11, 11);
+    border-bottom: 2px solid #242426;
 }
 
 .nav-item-left {
@@ -21,14 +22,14 @@
 }
 
 .nav-item-left:hover, .nav-item-right:hover {
-    background-color: #111112;
+    background-color: #242426;
     -webkit-transition: background-color 200ms linear;
     -ms-transition: background-color 200ms linear;
     transition: background-color 200ms linear;
 }
 
 .nav-title {
-    font-family: Georgia, serif;
+    font-family: sans-serif;
     font-size: 15px;
     color: #000000;
     font-weight: 700;
@@ -49,12 +50,12 @@
 
 .nav-item-left a, .nav-item-right a {
     display: block;
-    color: white;
+    color: #E7DECC;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
 body {
-    background-color: #111112;
+    background-color: rgb(11, 11, 11);
 }
