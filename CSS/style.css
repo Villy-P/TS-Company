@@ -11,3 +11,7 @@ html, body {
 body {
     min-width: 400px;
 }
+
+br {
+    visibility: hidden;
+}
