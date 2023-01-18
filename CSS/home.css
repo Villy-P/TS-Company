@@ -118,7 +118,7 @@
     background-color: rgb(11, 11, 11);
     position: relative;
     left: 10%;
-    border: 5px dashed rgb(0, 0, 0);
+    border: 5px dashed gray;
     color: #E7DECC;
     border-radius: 5px;
 }
