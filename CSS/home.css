@@ -105,24 +105,24 @@
     cursor: pointer;
 }
 
-
 .activity-btn:active {
     transform: translateY(5px);
 }
 
+.activities-about-selector, .activities-btn-left, .activities-btn-right {
+    background-color: #181e25;
+}
 
 .activities-about-selector {
     display: flex;
     max-width: 501px;
     height: 100px;
-    background-color: rgb(11, 11, 11);
     position: relative;
     left: 10%;
-    border: 5px dashed gray;
+    border: 5px solid #0B0C10;
     color: #E7DECC;
     border-radius: 5px;
 }
-
 
 .activities-about-text {
     text-align: center;
@@ -144,7 +144,6 @@
 .activities-btn-left {
     position: relative;
     height: 100px;
-    background-color: rgb(11, 11, 11);
     border: none;
     color: #E7DECC;
     cursor: pointer;
@@ -159,7 +158,6 @@
 .activities-btn-right {
     position: relative;
     height: 100px;
-    background-color: rgb(11, 11, 11);
     border: none;
     color: #E7DECC;
     cursor: pointer;
@@ -222,7 +220,6 @@
         text-align: center;
         overflow-x: visible;
     }
-
 
     .center-if > * {
         left: 0%;
