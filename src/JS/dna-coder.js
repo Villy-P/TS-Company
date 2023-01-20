@@ -191,6 +191,11 @@ function generateRandomSequence() {
         getRandomValueFromArray(l) +
         getRandomValueFromArray(l);
 }
+const attemptsDiv = document.querySelector(".attempts");
+const accuracyDiv = document.querySelector(".accuracy");
+let attempts = 0;
+let correct = 0;
+let wrong = 0;
 function solve() {
     const children = problem.children;
     let hadWrong = false;
@@ -208,8 +213,14 @@ function solve() {
     for (let i of children)
         if (i.classList.contains("correct"))
             i.readOnly = true;
-    if (!hadWrong)
+    if (!hadWrong) {
+        if (allGood.style.display === "none")
+            correct++;
         allGood.setAttribute("style", "display: text");
+    }
+    else {
+        wrong++;
+    }
 }
 function solveAminoAcid() {
     const children = problem.children;
@@ -233,10 +244,20 @@ function solveAminoAcid() {
     for (let i of children)
         if (i.classList.contains("correct"))
             i.readOnly = true;
-    if (!hadWrong)
+    if (!hadWrong) {
+        if (allGood.style.display === "none")
+            correct++;
         allGood.setAttribute("style", "display: text");
+    }
+    else {
+        wrong++;
+    }
 }
 function solveButtonClicked() {
+    if (allGood.style.display === "none")
+        attempts++;
     activitiesDropdown.value === "rna-to-amino-acid" ? solveAminoAcid() : solve();
+    attemptsDiv.innerHTML = `Attempts: ${attempts}`;
+    accuracyDiv.innerHTML = `Accuracy: ${(correct / attempts * 100).toFixed(2)}%`;
 }
 generateProblem();
