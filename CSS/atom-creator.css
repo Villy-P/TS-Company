@@ -1,0 +1,64 @@
+.atom-creator-title {
+    color: white;
+    font-size: xx-large;
+    text-align: center;
+}
+
+.atom-container {
+    aspect-ratio: 1 / 1;
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.atom-ring {
+    position: relative;
+    border: 2px solid white;
+    border-radius: 50%;
+    background: rgba(0,0,0,0);
+    color: white;
+    width: calc(100% - 50px);
+    height: calc(100% - 50px);
+    text-align: center;
+    line-height: 100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nucleus {
+    position: relative;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0,0,0,0);
+    color: white;
+    width: calc(100% - 25px);
+    height: calc(100% - 25px);
+    line-height: 100px;
+    margin: auto;
+}
+
+.molecule {
+    position: absolute;
+    border: none;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    text-align: center;
+    line-height: 100px;
+    right: -20%;
+    top: 10%;
+    left: 0;
+}
+
+.proton {
+    background-color: cyan;
+}
+
+.neutron {
+    background-color: greenyellow;
+}

@@ -111,6 +111,10 @@
     background-image: url("../Images/activities-dna.jpg");
 }
 
+.atom {
+    background-image: url("../Images/activities-atom.jpg");
+}
+
 @media only screen and (max-width: 740px) {
     .activity-container {
         flex-direction: column;
