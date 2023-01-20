@@ -4,5 +4,5 @@
 
 ### Biology
 
-* Baby maker column stuff
+* Genetic Simulation column stuff
 * Atom Creator
