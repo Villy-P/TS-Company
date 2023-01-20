@@ -1,8 +1,8 @@
 .main-title {
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    font-size: 50px;
+    font-size: 55px;
     color: #E7DECC;
-    font-weight: 350;
+    font-weight: 900;
     text-decoration: none;
     font-style: normal;
     font-variant: small-caps;
@@ -12,7 +12,21 @@
     word-break: break-word;
     white-space: normal;
     width: fit-content;
-    margin: 0;
+}
+
+
+.opening-img {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ), url("../Images/home-dna.jpg");
+    background-repeat:   no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100vw;
+    height: calc(100vh);
+    display: flex;
+    align-items: center;
 }
 
 
@@ -26,12 +40,13 @@
     font-style: normal;
     font-variant: normal;
     text-transform: none;
-    left: 10%;
     position: relative;
     max-width: 600px;
     overflow-wrap: break-word;
     word-break: break-word;
 }
+
+
 
 
 .fun-and-free-bold {
@@ -42,6 +57,8 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+
 
 
 .box {
@@ -55,6 +72,8 @@
 }
 
 
+
+
 .activities-about {
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     font-size: 25px;
@@ -63,6 +82,8 @@
     font-weight: 700;
     font-variant: small-caps;
 }
+
+
 
 
 .activities-to-do > p {
@@ -75,7 +96,11 @@
 }
 
 
+
+
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap');
+
+
 
 
 .activity-btn {
@@ -95,7 +120,6 @@
     cursor: pointer;
     position: relative;
     text-decoration: none;
-    left: 12%;
 }
  
 .activity-btn:hover {
@@ -105,24 +129,30 @@
     cursor: pointer;
 }
 
+
 .activity-btn:active {
     transform: translateY(5px);
 }
 
+
 .activities-about-selector, .activities-btn-left, .activities-btn-right {
     background-color: #181e25;
 }
+
 
 .activities-about-selector {
     display: flex;
     max-width: 501px;
     height: 100px;
     position: relative;
-    left: 10%;
     border: 5px solid #0B0C10;
     color: #E7DECC;
     border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
 }
+
 
 .activities-about-text {
     text-align: center;
@@ -141,6 +171,8 @@
 }
 
 
+
+
 .activities-btn-left {
     position: relative;
     height: 100px;
@@ -153,6 +185,8 @@
     width: 50px;
     max-width: 50px;
 }
+
+
 
 
 .activities-btn-right {
@@ -169,6 +203,8 @@
 }
 
 
+
+
 .main-img {
     position: relative;
     left: 60%;
@@ -176,7 +212,11 @@
 }
 
 
+
+
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap');
+
+
 
 
 .learn-more {
@@ -195,9 +235,10 @@
     align-items: center;
     cursor: pointer;
     position: relative;
-    left: 13%;
     transition: box-shadow .15s, transform .15s;
 }
+
+
 
 
 .learn-more:hover {
@@ -205,9 +246,13 @@
 }
 
 
+
+
 .learn-more:active {
     transform: translateY(5px);
 }
+
+
 
 
 .learn-more, .activity-btn {
@@ -215,21 +260,24 @@
 }
 
 
-@media only screen and (max-width: 800px){
-    .center-if {
-        text-align: center;
-        overflow-x: visible;
-    }
 
-    .center-if > * {
-        left: 0%;
-        margin: auto;
+
+@media only screen and (max-width: 930px){
+    .opening-img {
+        text-align: center;
+        justify-content: center;
+    }
+   
+    .opening-img > * {
+        left: 0;
     }
 }
+
 
 .dna-img {
     position: absolute;
 }
+
 
 .dna-img > img {
     width: 45%;

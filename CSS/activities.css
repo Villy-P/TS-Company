@@ -97,8 +97,18 @@
 .activity-img {
     padding: 0;
     overflow: hidden;
-    object-fit: cover;
-    top: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 50%;
+}
+
+.gene {
+    background-image: url("../Images/activities-gene.jpg");
+}
+
+.dna {
+    background-image: url("../Images/activities-dna.jpg");
 }
 
 @media only screen and (max-width: 740px) {
@@ -110,11 +120,16 @@
 
     .activity-explanation, .activity-img {
         width: 98%;
+        height: 300px;
     }
 
     .activity-explanation {
         padding: 0;
         padding-top: 30px;
         padding-bottom: 30px;
+    }
+
+    .reverse {
+        flex-direction: column-reverse;
     }
 }

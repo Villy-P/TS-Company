@@ -253,7 +253,7 @@ class Person {
     }
     
     public getFreckle(): string {
-        if (this.freckleGenotype == "ll")
+        if (this.freckleGenotype == "ff")
             return "Absent";
         return "Present";
     }

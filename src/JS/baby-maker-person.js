@@ -202,7 +202,7 @@ class Person {
         return "Full";
     }
     getFreckle() {
-        if (this.freckleGenotype == "ll")
+        if (this.freckleGenotype == "ff")
             return "Absent";
         return "Present";
     }

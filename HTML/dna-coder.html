@@ -4,9 +4,10 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Choose between three options to match DNA/RNA/Amino Acid. 
+        <meta name="description" content="Choose between three options to match DNA/RNA/Amino Acid.
         Match DNA, match DNA and RNA, and use the translation chart to match up RNA with it's corresponding Amino Acid.">
         <title>DNA Coder</title>
+
 
         <link rel="stylesheet" href="../CSS/main-navbar.css">
         <link rel="stylesheet" href="../CSS/dna-coder.css">
@@ -17,10 +18,11 @@
             <li class="nav-item-left nav-title"><a href="home.html">Interactive Bio</a></li>
             <li class="nav-item-left nav-text"><a href="activities.html">Activities</a></li>
             <li class="nav-item-right nav-text"><a href="">About</a></li>
-        </ul><br>
+        </ul><br><br><br><br>
         <div class="dna-coder-title">DNA Coder</div><br><br>
         <div class="center">
             <button class="activateChart" onclick="clickDisplayTranslationChart()">Show Translation Chart</button>
+
 
             <div class="container" style="display: none;">
                 <div class="First-mRNA-Base">First mRNA Base</div>
@@ -95,13 +97,13 @@
                     <a class="close" href="#">&times;</a>
                     <div class="content"></div>
                 </div>
-            </div><br><br><br>
+            </div><br>
             <div class="problem"></div><br>
             <p class="allGood" style="display: none;">All good!</p><br>
-            <button class="newProblem" onclick="generateProblem()">Generate New Problem</button><br><br>
+            <button class="newProblem" onclick="generateProblem()">Generate New Problem</button><br>
             <button class="submit" onclick="solveButtonClicked()">Submit</button><br><br>
         </div>
-        
+       
         <script src="../src/JS/dna-coder.js"></script>
     </body>
 </html>

@@ -4,34 +4,43 @@
     text-align: center;
 }
 
+
 .activateChart, .activateHint, .newProblem, .submit {
-    text-align: center;
-    background: #0099ff;
-    background-image: -webkit-linear-gradient(top, #0099ff, #006fb0);
-    background-image: -moz-linear-gradient(top, #0099ff, #006fb0);
-    background-image: -ms-linear-gradient(top, #0099ff, #006fb0);
-    background-image: -o-linear-gradient(top, #0099ff, #006fb0);
-    background-image: linear-gradient(to bottom, #0099ff, #006fb0);
-    box-shadow: 1px 1px 10px #666666;
-    padding: 3px 10px 3px 10px;
-    border-radius: 36px;
-    transition: box-shadow .15s, transform .15s;
+    font-family: sans-serif;
+    font-weight: 0;
+    font-size: 14px;
+    color: #E7DECC;
+    background: linear-gradient(177deg, #42b7ff 0%, #0096c7 100%);
+    padding: 15px 10px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: 250ms;
+    transform: translateY(0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    width: fit-content;
+    height: 20px;
+    margin: auto;
+    transition: box-shadow .15s, transform .15s;    
 }
 
+
 .activateChart:hover, .activateHint:hover, .newProblem:hover, .submit:hover {
-    background: #006fb0;
-    background-image: -webkit-linear-gradient(top, #006fb0, #0099ff);
-    background-image: -moz-linear-gradient(top, #006fb0, #0099ff);
-    background-image: -ms-linear-gradient(top, #006fb0, #0099ff);
-    background-image: -o-linear-gradient(top, #006fb0, #0099ff);
-    background-image: linear-gradient(to bottom, #006fb0, #0099ff);
+    background: linear-gradient(177deg, #0096c7 0%, #42b7ff 100%);
     transform: translateY(-5px);
+    text-decoration: none;
     cursor: pointer;
 }
+
 
 .activateChart:active, .activateHint:active, .newProblem:active, .submit:active {
     transform: translateY(5px);
 }
+
 
 .container {
     display: grid;
@@ -43,6 +52,7 @@
     border: 10px solid #010101;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
+
 
 .problem {
     display: flex;
@@ -57,9 +67,11 @@
     justify-content: center;
 }
 
+
 .problem > div {
     flex-grow: 1;
 }
+
 
 .container > div, .problem-cell {
     background-color: rgb(11, 11, 11);
@@ -72,18 +84,22 @@
     color: white;
 }
 
+
 .problem > div > div {
     min-height: 30px;
     min-width: 100px;
 }
 
+
 .problem-cell {
     font-size: 30px;
 }
 
+
 .problem > div > div {
     text-align: center;
 }
+
 
 .problem-input {
     background-color: white;
@@ -92,13 +108,16 @@
     line-height: 30px;
 }
 
+
 .correct {
     background-color: green;
 }
 
+
 .wrong {
     background-color: red;
 }
+
 
 .First-mRNA-Base { grid-area: 1 / 1 / 2 / 2; }
 .A { grid-area: 1 / 4 / 2 / 5; }
@@ -151,16 +170,12 @@
 .-----A----- { grid-area: 16 / 6 / 17 / 7; }
 .-----G----- { grid-area: 17 / 6 / 18 / 7; }
 
+
 .activities, .settings {
     appearance: none;
-    background: #0099ff;
-    background-image: -webkit-linear-gradient(top, #0099ff, #006fb0);
-    background-image: -moz-linear-gradient(top, #0099ff, #006fb0);
-    background-image: -ms-linear-gradient(top, #0099ff, #006fb0);
-    background-image: -o-linear-gradient(top, #0099ff, #006fb0);
-    background-image: linear-gradient(to bottom, #0099ff, #006fb0);
-    border: 3px solid black;
-    border-radius: 6px;
+    background-color: #0096c7;
+    background: linear-gradient(177deg, #42b7ff 0%, #0096c7 100%);
+    border: none;
     box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
     box-sizing: border-box;
     color: #fff;
@@ -181,22 +196,26 @@
     white-space: nowrap;
 }
 
+
 .activities:hover, .settings:hover {
-    background: #006fb0;
-    background-image: -webkit-linear-gradient(top, #006fb0, #0099ff);
-    background-image: -moz-linear-gradient(top, #006fb0, #0099ff);
-    background-image: -ms-linear-gradient(top, #006fb0, #0099ff);
-    background-image: -o-linear-gradient(top, #006fb0, #0099ff);
-    background-image: linear-gradient(to bottom, #006fb0, #0099ff);
+    background-color: #0096c7;
+    background: linear-gradient(177deg, #0096c7 0%, #42b7ff 100%);
 }
+
+
+.activities > *, .settings > * {
+    background-color: #0096c7;
+}
+
 
 .activateHint {
     appearance: button;
-
     text-decoration: none;
 }
 
+
 /* https://codepen.io/imprakash/pen/GgNMXO */
+
 
 .overlay {
     position: fixed;
@@ -210,10 +229,12 @@
     opacity: 0;
 }
 
+
 .overlay:target {
     visibility: visible;
     opacity: 1;
 }
+
 
 .popup {
     margin: 70px auto;
@@ -225,11 +246,13 @@
     transition: all 5s ease-in-out;
 }
 
+
 .popup h2 {
     margin-top: 0;
     color: #333;
     font-family: Tahoma, Arial, sans-serif;
 }
+
 
 .popup .close {
     position: absolute;
@@ -242,14 +265,17 @@
     color: #333;
 }
 
+
 .popup .close:hover {
     color: #06D85F;
 }
+
 
 .popup .content {
     max-height: 50%;
     overflow: auto;
 }
+
 
 .allGood {
     color: white;
