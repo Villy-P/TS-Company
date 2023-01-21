@@ -4,11 +4,10 @@
     text-align: center;
 }
 
-.randomPerson, .seePossibleBaby {
+.randomPerson, .seePossibleBaby, .change, .submit {
     appearance: none;
     background: linear-gradient(177deg, #42b7FF 0%, #0096C7 100%);
     border: none;
-    border-radius: 6px;
     box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
     box-sizing: border-box;
     color: #fff;
@@ -30,13 +29,13 @@
     transition: box-shadow .15s, transform .15s;
 }
 
-.randomPerson:hover, .seePossibleBaby:hover {
+.randomPerson:hover, .seePossibleBaby:hover, .change:hover, .submit:hover {
     background: linear-gradient(177deg, #0096C7 0%, #42b7FF 100%);
     cursor: pointer;
     transform: translateY(-5px);
 }
 
-.randomPerson:active, .seePossibleBaby:active {
+.randomPerson:active, .seePossibleBaby:active, .change:active, .submit:active {
     transform: translateY(5px);
 }
 
@@ -60,7 +59,6 @@
     appearance: none;
     background: linear-gradient(177deg, #42b7FF 0%, #0096C7 100%);
     border: none;
-    border-radius: 6px;
     box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
     box-sizing: border-box;
     color: #fff;
@@ -167,4 +165,23 @@
 .person-btn-content > p > pre > p {
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.problem-text {
+    color: white;
+}
+
+.answer {
+    width: auto;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.wrong {
+    background-color: red;
 }
