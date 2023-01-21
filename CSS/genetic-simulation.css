@@ -130,6 +130,7 @@
     width: 80%;
     overflow-x: auto;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     transition: max-height 0.2s ease-out;
     background-color: #020202;
     margin: auto;
