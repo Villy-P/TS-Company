@@ -84,10 +84,10 @@ protonSelector.onchange = (evt: Event) => {
     displayElectrons();
     moveMolecule();
     otherInfo.innerHTML = `<pre>` + `<p>Appearance: ${element.appearance}\n</p>`
-     + `<p>Bioling Point: ${element.boil}\n</p>`
+     + `<p>Bioling Point: ${element.boil}K\n</p>`
      + `<p>Category: ${element.category}\n</p>`
      + `<p>Density: ${element.density}\n</p>`
-     + `<p>Melting Point: ${element.melt}\n</p>`
+     + `<p>Melting Point: ${element.melt}K\n</p>`
      + `<p>Phase: ${element.phase}\n</p></pre>`;
 }
 
@@ -124,3 +124,16 @@ function displayElectrons(): void {
 }
 
 displayElectrons();
+
+const trySomeProblem: HTMLButtonElement = document.querySelector(".transition-btn")!;
+const atomGen: HTMLDivElement = document.querySelector(".atom-gen")!;
+const problemSection: HTMLDivElement = document.querySelector(".problem-section")!;
+
+let currentlyProblem: boolean = false;
+
+function pressTrySomeProblems(): void {
+    trySomeProblem.innerHTML = currentlyProblem ? "Try Some Problems" : "Go Back";
+    atomGen.style.display = currentlyProblem ? "inline" : "none";
+    problemSection.style.display = currentlyProblem ? "none" : "inline";
+    currentlyProblem = !currentlyProblem;
+}

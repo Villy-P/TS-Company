@@ -19,38 +19,44 @@
 
         <div class="center">
             <div class="atom-creator-title">Atom Creator</div><br>
+            <button class="transition-btn" onclick="pressTrySomeProblems()">Try Some Problems</button>
         </div>
 
-        <div class="atom-container">
-            <div class="atom-ring">
+        <div class="atom-gen">
+            <div class="atom-container">
                 <div class="atom-ring">
                     <div class="atom-ring">
                         <div class="atom-ring">
                             <div class="atom-ring">
                                 <div class="atom-ring">
-                                    <div class="nucleus"></div>
+                                    <div class="atom-ring">
+                                        <div class="nucleus"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+    
+            <div class="center">
+                <span class="amounts">
+                    <span class="proton-amount" style="color: cyan;">0 Protons</span> /
+                    <span class="neutron-amount" style="color: crimson">0 Neutrons</span> /
+                    <span class="electron-amount" style="color: greenyellow">0 Electrons</span>
+                </span><br><br>
+                <input class="proton-selector number-selector" type="text" placeholder="Protons">
+                <br><br><div class="element-box">
+                    <div class="element-num">1</div><br>
+                    <div class="element-symbol">H</div><br>
+                    <div class="element-name">Rutherfordium</div>
+                    <div class="element-mass">0</div>
+                </div><br><br>
+                <div class="other-info" style="color: white; word-break: break-all;"></div><br><br><br><br>
+            </div>
         </div>
-
-        <div class="center">
-            <span class="amounts">
-                <span class="proton-amount" style="color: cyan;">0 Protons</span> /
-                <span class="neutron-amount" style="color: crimson">0 Neutrons</span> /
-                <span class="electron-amount" style="color: greenyellow">0 Electrons</span>
-            </span><br><br>
-            <input class="proton-selector number-selector" type="text" placeholder="Protons">
-            <br><br><div class="element-box">
-                <div class="element-num">1</div><br>
-                <div class="element-symbol">H</div><br>
-                <div class="element-name">Rutherfordium</div>
-                <div class="element-mass">0</div>
-            </div><br><br>
-            <div class="other-info" style="color: white; word-break: break-all;"></div><br><br><br><br>
+        <div class="problem-section">
+            
         </div>
         
         <script src="../src/JS/periodic-table.js"></script>
