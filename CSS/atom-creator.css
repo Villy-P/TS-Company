@@ -50,16 +50,91 @@
     height: 10px;
     text-align: center;
     line-height: 100px;
-    right: -20%;
-    top: 10%;
-    left: 0;
     border: 1px solid black;
 }
 
-.proton {
+.molecule > p {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 10px;
+}
+
+.proton, .proton-selector {
     background-color: cyan;
 }
 
-.neutron {
+.neutron, .neutron-selector {
+    background-color: crimson;
+}
+
+.electron, .electron-selector {
     background-color: greenyellow;
+}
+
+.number-selector {
+    padding: 5px;
+    text-align: center;
+    width: 150px;
+    color: black;
+}
+
+.amounts {
+    color: white;
+}
+
+.element-box {
+    background-color: wheat;
+    width: 125px;
+    height: auto;
+    margin: auto;
+    border: 5px solid black;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+.element-num {
+    text-align: start;
+    position: relative;
+    top: 5px;
+    left: 5px;
+    font-weight: 900;
+}
+
+.element-mass {
+    position: relative;
+    bottom: 5px;
+    right: 3px;
+    align-self: flex-end;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.element-name {
+    position: relative;
+    bottom: 5px;
+    right: 3px;
+    font-size: large;
+    align-self: flex-end;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.element-symbol {
+    position: relative;
+    bottom: 5px;
+    right: 3px;
+    font-size: 50px;
+    align-self: flex-end;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.other-info > pre > p {
+    white-space: break-spaces;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
