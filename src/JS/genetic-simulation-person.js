@@ -247,6 +247,7 @@ class Person {
         data += `<p>    Lip Type:`.padEnd(35, " ") + `${this.getLipType().padEnd(25, " ")} (${this.lipTypeGenotype})</p>`;
         data += `<p>    Freckles:`.padEnd(35, " ") + `${this.getFreckle().padEnd(25, " ")} (${this.freckleGenotype})</p>`;
         data += `<p>    Dimples:`.padEnd(35, " ") + `${this.getDimple().padEnd(25, " ")} (${this.dimpleGenotype})</p>`;
+        data += `<br>`;
         return data + "</pre>";
     }
 }

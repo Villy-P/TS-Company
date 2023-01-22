@@ -104,6 +104,7 @@
 .person-container {
     text-align: center;
     margin: auto;
+    overflow-x:auto;
 }
 
 .person-btn {
@@ -134,6 +135,14 @@
     margin: auto;
     color: white;
     text-align: left;
+    flex: 0 0 100%;
+}
+
+.person-btn-content > p {
+    overflow-x: auto;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    float: left;
 }
 
 .person-btn:after {
