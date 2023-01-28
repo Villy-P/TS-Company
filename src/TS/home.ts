@@ -19,8 +19,6 @@ const activitiesAbout: string[] = [
 
 shuffleArray(activitiesAbout);
 
-console.log(activitiesAbout);
-
 let currentIndex: number = 0;
 
 const activitiesAboutText: HTMLDivElement = document.querySelector(".activities-about-text")!;

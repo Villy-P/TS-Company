@@ -15,7 +15,7 @@ const otherInfo: HTMLDivElement = document.querySelector('.other-info')!;
 
 function selector(e: KeyboardEvent, max: number, selector: HTMLInputElement): boolean {
     const key: string = e.key;
-    if (key == "Backspace")
+    if (key == "Backspace" || key == "Enter")
         return true;
     if (parseInt(selector.value + key) > max) {
         selector.value = max.toString();
