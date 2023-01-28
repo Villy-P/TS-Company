@@ -34,17 +34,18 @@ function makeGenotypeFrom(fatherGenotype, motherGenotype) {
 function getGenotypeChance(fatherGenotype, motherGenotype, childGenotype) {
     const fatherGene = getGenotype(fatherGenotype);
     const motherGene = getGenotype(motherGenotype);
+    const childGene = getGenotype(childGenotype);
     if (fatherGene == "homo-dominant" && motherGene == "homo-dominant")
-        return childGenotype == "homo-dominant" ? 100 : 0;
+        return childGene == "homo-dominant" ? 100 : 0;
     if (fatherGene == "homo-reccessive" && motherGene == "homo-reccessive")
-        return childGenotype == "homo-reccessive" ? 100 : 0;
+        return childGene == "homo-reccessive" ? 100 : 0;
     if (fatherGene == "homo-reccessive" && motherGene == "homo-dominant" || fatherGene == "homo-dominant" && motherGene == "homo-reccessive")
-        return childGenotype == "hetero" ? 100 : 0;
+        return childGene == "hetero" ? 100 : 0;
     if (fatherGene == "hetero" && motherGene == "hetero")
-        return childGenotype == "hetero" ? 50 : 25;
+        return childGene == "hetero" ? 50 : 25;
     if (fatherGene == "hetero" && motherGene == "homo-dominant" || fatherGene == "homo-dominant" && motherGene == "hetero")
-        return childGenotype == "homo-reccessive" ? 0 : 50;
-    return childGenotype == "homo-dominant" ? 0 : 50;
+        return childGene == "homo-reccessive" ? 0 : 50;
+    return childGene == "homo-dominant" ? 0 : 50;
 }
 class Person {
     constructor(fName, lName) {

@@ -139,7 +139,7 @@
     word-wrap: break-word;
 }
 
-.transition-btn {
+.transition-btn, .submit {
     font-family: sans-serif;
     font-weight: 0;
     font-size: 14px;
@@ -159,7 +159,7 @@
     margin: auto;
 }
  
-.transition-btn:hover {
+.transition-btn:hover, .submit:hover {
     background: linear-gradient(177deg, #0096c7 0%, #42b7ff 100%);
     transform: translateY(-5px);
     text-decoration: none;
@@ -167,6 +167,21 @@
 }
 
 
-.transition-btn:active {
+.transition-btn:active, .submit:active {
     transform: translateY(5px);
+}
+
+.answer {
+    width: auto;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.wrong {
+    background-color: red;
 }

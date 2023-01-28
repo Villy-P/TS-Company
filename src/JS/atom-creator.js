@@ -8,9 +8,10 @@ const nucleus = document.querySelector(".nucleus");
 const protonSelector = document.querySelector(".proton-selector");
 const periodicTable = JSON.parse(periodicTableData).elements;
 const otherInfo = document.querySelector('.other-info');
+const problemTextAtom = document.querySelector(".problem-text");
 function selector(e, max, selector) {
     const key = e.key;
-    if (key == "Backspace")
+    if (key == "Backspace" || key == "Enter")
         return true;
     if (parseInt(selector.value + key) > max) {
         selector.value = max.toString();
@@ -119,4 +120,63 @@ function pressTrySomeProblems() {
     atomGen.style.display = currentlyProblem ? "inline" : "none";
     problemSection.style.display = currentlyProblem ? "none" : "inline";
     currentlyProblem = !currentlyProblem;
+}
+function generateAtomProblem() {
+    // Types of Problems:
+    // 1 Neutrons from protons and mass
+    // 2 Neutrons from electrons and mass
+    // 3 Electrons from protons
+    // 4 Protons from electrons
+    // 5 Mass from electrons and neutrons
+    // 6 Mass from protons and neutrons
+    // 7 Protons from mass and neutrons
+    // 8 Electrons from mass and neutrons
+    const rand = randomIntInterval(0, 7);
+    const atomNum = randomIntInterval(1, 118);
+    const atom = periodicTable[atomNum - 1];
+    switch (rand) {
+        case 0:
+            return [`${atom.name} has ${atomNum} protons and has a mass of ${atom.atomic_mass}. How many neutrons does it have?`, Math.round(atom.atomic_mass - atomNum)];
+        case 1:
+            return [`${atom.name} has ${atomNum} electrons and has a mass of ${atom.atomic_mass}. How many neutrons does it have?`, Math.round(atom.atomic_mass - atomNum)];
+        case 2:
+            return [`${atom.name} has ${atomNum} electrons. How many protons does it have?`, atomNum];
+        case 3:
+            return [`${atom.name} has ${atomNum} protons. How many electrons does it have?`, atomNum];
+        case 4:
+            return [`${atom.name} has ${atomNum} electrons and has ${Math.round(atom.atomic_mass - atomNum)} neutrons. What is it's mass?`, Math.round(atom.atomic_mass)];
+        case 5:
+            return [`${atom.name} has ${atomNum} protons and has ${Math.round(atom.atomic_mass - atomNum)} neutrons. What is it's mass?`, Math.round(atom.atomic_mass)];
+        case 6:
+            return [`${atom.name} has ${Math.round(atom.atomic_mass - atomNum)} neutrons and has a mass of ${atom.atomic_mass}. How many protons does it have?`, atomNum];
+        case 7:
+            return [`${atom.name} has ${Math.round(atom.atomic_mass - atomNum)} neutrons and has a mass of ${atom.atomic_mass}. How many electrons does it have?`, atomNum];
+    }
+    throw new Error(`Num ${rand} out of range 0-7`);
+}
+let atomProblem = generateAtomProblem();
+problemTextAtom.innerHTML = atomProblem[0].toString();
+const problemAtomText = document.querySelector(".problem-text");
+const submitAtomButton = document.querySelector(".submit");
+const answerAtom = document.querySelector(".answer");
+let attemptsAtom = 0;
+let correctAtom = 0;
+let wrongAtom = 0;
+const attemptsAtomText = document.querySelector('.attempts');
+const accuracyAtomText = document.querySelector(".accuracy");
+function pressAtomSubmit() {
+    attemptsAtom++;
+    if (answerAtom.value === atomProblem[1].toString().trim()) {
+        correctAtom++;
+        atomProblem = generateAtomProblem();
+        answerAtom.classList.remove('wrong');
+        problemAtomText.innerHTML = atomProblem[0];
+        answerAtom.value = "";
+    }
+    else {
+        answerAtom.classList.add("wrong");
+        wrongAtom++;
+    }
+    attemptsAtomText.innerHTML = "Attempts: " + attemptsAtom;
+    accuracyAtomText.innerHTML = "Accuracy: " + (correctAtom / attemptsAtom * 100).toFixed(2) + "%";
 }

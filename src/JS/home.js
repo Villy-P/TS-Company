@@ -17,7 +17,6 @@ const activitiesAbout = [
     "Electrons",
 ];
 shuffleArray(activitiesAbout);
-console.log(activitiesAbout);
 let currentIndex = 0;
 const activitiesAboutText = document.querySelector(".activities-about-text");
 activitiesAboutText.innerHTML = activitiesAbout[0];
