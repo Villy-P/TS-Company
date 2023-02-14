@@ -283,3 +283,12 @@
     left: calc(50% + 10px);
     top: 30%;
 }
+
+.accuracy-text {
+    color: white;
+    font-size: larger;
+}
+
+.accuracy-text-inline {
+    color: white;
+}
