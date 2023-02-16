@@ -166,8 +166,12 @@ const attemptsAtomText = document.querySelector('.attempts');
 const accuracyAtomText = document.querySelector(".accuracy");
 function pressAtomSubmit() {
     attemptsAtom++;
+    localStorage.setItem("global_attempts", (getLocalStorage('global_attempts') + 1).toString());
+    sessionStorage.setItem("session_attempts", (getSessionStorage('session_attempts') + 1).toString());
     if (answerAtom.value === atomProblem[1].toString().trim()) {
         correctAtom++;
+        localStorage.setItem("global_right", (getLocalStorage('global_right') + 1).toString());
+        sessionStorage.setItem("session_right", (getSessionStorage('session_right') + 1).toString());
         atomProblem = generateAtomProblem();
         answerAtom.classList.remove('wrong');
         problemAtomText.innerHTML = atomProblem[0];

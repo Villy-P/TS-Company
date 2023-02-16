@@ -28,3 +28,11 @@ function moveRight() {
     currentIndex = currentIndex == activitiesAbout.length - 1 ? 0 : currentIndex += 1;
     activitiesAboutText.innerHTML = activitiesAbout[currentIndex];
 }
+const globalAttemptsDiv = document.querySelector('.globalAttempt');
+globalAttemptsDiv.innerHTML = "Attempts: " + getLocalStorage('global_attempts').toString();
+const globalAccuracyDiv = document.querySelector('.globalAccuracy');
+globalAccuracyDiv.innerHTML = "Accuracy: " + (getLocalStorage('global_right') != 0 ? (getLocalStorage('global_right') / getLocalStorage('global_attempts') * 100).toFixed(2) + "%" : "0%");
+const sessionAttemptsDiv = document.querySelector('.sessionAttempt');
+sessionAttemptsDiv.innerHTML = "Attempts: " + getSessionStorage('session_attempts').toString();
+const sessionAccuracyDiv = document.querySelector('.sessionAccuracy');
+sessionAccuracyDiv.innerHTML = "Accuracy: " + (getSessionStorage('session_right') != 0 ? (getSessionStorage('session_right') / getSessionStorage('session_attempts') * 100).toFixed(2) + "%" : "0%");
