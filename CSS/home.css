@@ -115,7 +115,7 @@
     transform: translateY(5px);
 }
 
-.activities-about-selector, .activities-btn-left, .activities-btn-right {
+.activities-about-selector, .activities-btn-left-right {
     background-color: #181e25;
 }
 
@@ -148,7 +148,7 @@
     transition: opacity .5s ease-in-out;
 }
 
-.activities-btn {
+.activities-btn-left-right {
     position: relative;
     height: 100px;
     border: none;
