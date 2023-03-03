@@ -19,7 +19,7 @@
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
-      ), url("../Images/home-dna.jpg");
+    ), url("../Images/home-dna.jpg");
     background-repeat:   no-repeat;
     background-position: center center;
     background-size: cover;
