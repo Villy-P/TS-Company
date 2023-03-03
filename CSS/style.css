@@ -15,3 +15,9 @@ body {
 br {
     visibility: hidden;
 }
+
+.activity-title {
+    color: white;
+    font-size: xx-large;
+    text-align: center;
+}
