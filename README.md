@@ -4,5 +4,4 @@
 
 ### Biology
 
-* Genetic Simulation column stuff
-* Atom Creator
+* Counters & Style
