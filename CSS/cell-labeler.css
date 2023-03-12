@@ -29,3 +29,24 @@
     background-color: gray;
     cursor: pointer;
 }
+
+.activity-type-selector {
+    display: inline-block;
+}
+
+.activity-type-selector-item {
+    border: 2px solid gray;
+    width: fit-content;
+    color: white;
+    padding: 5px 10px;
+    float: left;
+}
+
+.activity-type-selector-item:hover {
+    background-color: rgb(62, 62, 62);
+    cursor: pointer;
+}
+
+.activity-type-selector-item-active {
+    background-color: rgb(62, 62, 62);
+}
