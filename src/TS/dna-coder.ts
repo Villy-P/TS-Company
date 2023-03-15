@@ -14,10 +14,6 @@ function clickDisplayTranslationChart(): void {
 const activitiesDropdown: HTMLSelectElement = document.querySelector(".activities")!;
 const settingsDropdown: HTMLSelectElement = document.querySelector(".settings")!;
 
-function getRandomValue(min: number, max: number): number {
-    return Math.floor(Math.random() * (max - min + 1) + min);
-}
-
 settingsDropdown.onchange = function(): void {
     const text = settingsDropdown.options[settingsDropdown.selectedIndex].text;
     valueSetting = text !== "Random" ? text.split(" ")[0] as unknown as number : getRandomValue(1, 10);

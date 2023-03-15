@@ -14,3 +14,6 @@ let globalRight = getLocalStorage("global_right");
 let sessionAttempts = getLocalStorage("session_attempts");
 let sessionRight = getLocalStorage("session_right");
 console.log(globalAttempts, globalRight, sessionAttempts, sessionRight);
+function getRandomValue(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}

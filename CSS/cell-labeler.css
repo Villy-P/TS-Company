@@ -38,6 +38,7 @@
     color: white;
     padding: 5px 10px;
     float: left;
+    margin: auto;
 }
 
 .activity-type-selector-item:hover {
@@ -47,4 +48,8 @@
 
 .activity-type-selector-item-active {
     background-color: rgb(62, 62, 62);
+}
+
+.matching-select-text {
+    color: white;
 }
